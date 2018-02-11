@@ -1,0 +1,631 @@
+Mohameds-MacBook-Pro-2:~ sa3idos$ git config --global user.email "mohamedsaeed8917@gmail.com"
+Mohameds-MacBook-Pro-2:~ sa3idos$ git config --global color.ui true
+Mohameds-MacBook-Pro-2:~ sa3idos$ mkdir store
+Mohameds-MacBook-Pro-2:~ sa3idos$ cd store
+Mohameds-MacBook-Pro-2:store sa3idos$ git init
+Initialized empty Git repository in /Users/sa3idos/store/.git/
+Mohameds-MacBook-Pro-2:store sa3idos$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+Mohameds-MacBook-Pro-2:store sa3idos$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	1.1 Getting Started.txt
+	3.1 Git Branching.txt
+	5.1 Distributed Git.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mohameds-MacBook-Pro-2:store sa3idos$ git add 1.1 Getting Started.txt
+fatal: pathspec '1.1' did not match any files
+Mohameds-MacBook-Pro-2:store sa3idos$ git add 1.1 Getting Started.txt
+fatal: pathspec '1.1' did not match any files
+Mohameds-MacBook-Pro-2:store sa3idos$ git add <1.1 Getting Started.txt>
+-bash: syntax error near unexpected token `newline'
+Mohameds-MacBook-Pro-2:store sa3idos$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	1.1 Getting Started.txt
+	3.1 Git Branching.txt
+	5.1 Distributed Git.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mohameds-MacBook-Pro-2:store sa3idos$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	1.1GettingStarted.txt
+	3.1GitBranching.txt
+	5.1DistributedGit.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mohameds-MacBook-Pro-2:store sa3idos$ git add 1.1GettingStarted.txt
+Mohameds-MacBook-Pro-2:store sa3idos$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   1.1GettingStarted.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	3.1GitBranching.txt
+	5.1DistributedGit.txt
+
+Mohameds-MacBook-Pro-2:store sa3idos$ git commit -m "just added the first file"
+[master (root-commit) 1c1c1c2] just added the first file
+ 1 file changed, 32 insertions(+)
+ create mode 100644 1.1GettingStarted.txt
+Mohameds-MacBook-Pro-2:store sa3idos$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	3.1GitBranching.txt
+	5.1DistributedGit.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mohameds-MacBook-Pro-2:store sa3idos$ git add 3.1GitBranching.txt
+Mohameds-MacBook-Pro-2:store sa3idos$ git commit -m "2nd file done"
+[master 1b7fe6f] 2nd file done
+ 1 file changed, 100 insertions(+)
+ create mode 100644 3.1GitBranching.txt
+Mohameds-MacBook-Pro-2:store sa3idos$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	5.1DistributedGit.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mohameds-MacBook-Pro-2:store sa3idos$ git add 5.1DistributedGit.txt
+Mohameds-MacBook-Pro-2:store sa3idos$ git commit -m "the 3rd and final file"
+[master 0038f2a] the 3rd and final file
+ 1 file changed, 55 insertions(+)
+ create mode 100644 5.1DistributedGit.txt
+Mohameds-MacBook-Pro-2:store sa3idos$ git status
+On branch master
+nothing to commit, working tree clean
+
+
+Mohameds-MacBook-Pro-2:store sa3idos$ git log
+commit 9c15a959c60df31358c2b80d4d69af58bfd4ddc3 (HEAD -> master)
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 23:16:18 2018 +0200
+
+    add a file again
+
+commit 9cc7d6021ce1bb9805580447cc5cc8d443e0dd5b
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 22:55:57 2018 +0200
+
+    deleted the file again
+
+commit 18ae1f5839f459f13cbaf406f6ee160eb8e29eed
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 22:54:58 2018 +0200
+
+    adding the file again since there was an error while reverting the delete process
+
+commit b23b0e9782549a9fc452192d25dddafeb3f66db9
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 22:45:44 2018 +0200
+
+    deleted a file
+
+commit 0038f2ac6d44e7fdc1987540a588e6211d624713
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 21:37:59 2018 +0200
+
+    the 3rd and final file
+
+commit 1b7fe6fc9b6e88ac7c8c4b2d6b8dd6ef813d503b
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 21:37:19 2018 +0200
+
+    2nd file done
+
+commit 1c1c1c2811694b6ed40f43432ce6c40fa15cabe1
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 21:34:14 2018 +0200
+
+    just added the first file
+Mohameds-MacBook-Pro-2:store sa3idos$ git rm -f 3.1GitBranching.txt
+rm '3.1GitBranching.txt'
+Mohameds-MacBook-Pro-2:store sa3idos$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	deleted:    3.1GitBranching.txt
+
+Mohameds-MacBook-Pro-2:store sa3idos$ git log
+commit 9c15a959c60df31358c2b80d4d69af58bfd4ddc3 (HEAD -> master)
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 23:16:18 2018 +0200
+
+    add a file again
+
+commit 9cc7d6021ce1bb9805580447cc5cc8d443e0dd5b
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 22:55:57 2018 +0200
+
+    deleted the file again
+
+commit 18ae1f5839f459f13cbaf406f6ee160eb8e29eed
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 22:54:58 2018 +0200
+
+    adding the file again since there was an error while reverting the delete process
+
+commit b23b0e9782549a9fc452192d25dddafeb3f66db9
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 22:45:44 2018 +0200
+
+    deleted a file
+
+commit 0038f2ac6d44e7fdc1987540a588e6211d624713
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 21:37:59 2018 +0200
+
+    the 3rd and final file
+
+commit 1b7fe6fc9b6e88ac7c8c4b2d6b8dd6ef813d503b
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 21:37:19 2018 +0200
+
+    2nd file done
+
+commit 1c1c1c2811694b6ed40f43432ce6c40fa15cabe1
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 21:34:14 2018 +0200
+
+    just added the first file
+Mohameds-MacBook-Pro-2:store sa3idos$ git revert 9c15a959c60df31358c2b80d4d69af58bfd4ddc3
+error: your local changes would be overwritten by revert.
+hint: commit your changes or stash them to proceed.
+fatal: revert failed
+Mohameds-MacBook-Pro-2:store sa3idos$ git commit -m "delete the file!!"
+git commit -m "delete the filegit revert 9c15a959c60df31358c2b80d4d69af58bfd4ddc3"
+[master 27b395d] delete the filegit revert 9c15a959c60df31358c2b80d4d69af58bfd4ddc3
+ 1 file changed, 100 deletions(-)
+ delete mode 100644 3.1GitBranching.txt
+Mohameds-MacBook-Pro-2:store sa3idos$ git log
+commit 27b395d6c34620e02964b98487643e1d8e37b814 (HEAD -> master)
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 23:17:37 2018 +0200
+
+    delete the filegit revert 9c15a959c60df31358c2b80d4d69af58bfd4ddc3
+
+commit 9c15a959c60df31358c2b80d4d69af58bfd4ddc3
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 23:16:18 2018 +0200
+
+    add a file again
+
+commit 9cc7d6021ce1bb9805580447cc5cc8d443e0dd5b
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 22:55:57 2018 +0200
+
+    deleted the file again
+
+commit 18ae1f5839f459f13cbaf406f6ee160eb8e29eed
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 22:54:58 2018 +0200
+
+    adding the file again since there was an error while reverting the delete process
+
+commit b23b0e9782549a9fc452192d25dddafeb3f66db9
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 22:45:44 2018 +0200
+
+    deleted a file
+
+commit 0038f2ac6d44e7fdc1987540a588e6211d624713
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 21:37:59 2018 +0200
+
+    the 3rd and final file
+
+commit 1b7fe6fc9b6e88ac7c8c4b2d6b8dd6ef813d503b
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 21:37:19 2018 +0200
+
+    2nd file done
+
+commit 1c1c1c2811694b6ed40f43432ce6c40fa15cabe1
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 21:34:14 2018 +0200
+
+    just added the first file
+Mohameds-MacBook-Pro-2:store sa3idos$ git status
+On branch master
+nothing to commit, working tree clean
+Mohameds-MacBook-Pro-2:store sa3idos$ git revert 9c15a959c60df31358c2b80d4d69af58bfd4ddc3
+On branch master
+nothing to commit, working tree clean
+Mohameds-MacBook-Pro-2:store sa3idos$ git status
+On branch master
+nothing to commit, working tree clean
+Mohameds-MacBook-Pro-2:store sa3idos$ git log
+commit 27b395d6c34620e02964b98487643e1d8e37b814 (HEAD -> master)
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 23:17:37 2018 +0200
+
+    delete the filegit revert 9c15a959c60df31358c2b80d4d69af58bfd4ddc3
+
+commit 9c15a959c60df31358c2b80d4d69af58bfd4ddc3
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 23:16:18 2018 +0200
+
+    add a file again
+
+commit 9cc7d6021ce1bb9805580447cc5cc8d443e0dd5b
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 22:55:57 2018 +0200
+
+    deleted the file again
+
+commit 18ae1f5839f459f13cbaf406f6ee160eb8e29eed
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 22:54:58 2018 +0200
+
+    adding the file again since there was an error while reverting the delete process
+
+commit b23b0e9782549a9fc452192d25dddafeb3f66db9
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 22:45:44 2018 +0200
+
+    deleted a file
+
+commit 0038f2ac6d44e7fdc1987540a588e6211d624713
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 21:37:59 2018 +0200
+
+    the 3rd and final file
+
+commit 1b7fe6fc9b6e88ac7c8c4b2d6b8dd6ef813d503b
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 21:37:19 2018 +0200
+
+    2nd file done
+
+commit 1c1c1c2811694b6ed40f43432ce6c40fa15cabe1
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 21:34:14 2018 +0200
+
+    just added the first file
+
+
+Mohameds-MacBook-Pro-2:store sa3idos$ git remote
+Mohameds-MacBook-Pro-2:store sa3idos$ git remote /u
+error: Unknown subcommand: /u
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+Mohameds-MacBook-Pro-2:store sa3idos$ git remote add origin
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+Mohameds-MacBook-Pro-2:store sa3idos$ git remote origin https://github.com/MohamedSaeed08/Indv.-Task.git
+error: Unknown subcommand: origin
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+Mohameds-MacBook-Pro-2:store sa3idos$ git remote add origin https://github.com/MohamedSaeed08/Indv.-Task.git
+Mohameds-MacBook-Pro-2:store sa3idos$ git push -u origin master
+Username for 'https://github.com': MohamedSaeed08
+Password for 'https://MohamedSaeed08@github.com': 
+To https://github.com/MohamedSaeed08/Indv.-Task.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/MohamedSaeed08/Indv.-Task.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+Mohameds-MacBook-Pro-2:store sa3idos$ git remote add origin https://github.com/MohamedSaeed08/Repo2.git
+fatal: remote origin already exists.
+Mohameds-MacBook-Pro-2:store sa3idos$ git push -u origin master
+To https://github.com/MohamedSaeed08/Indv.-Task.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/MohamedSaeed08/Indv.-Task.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+Mohameds-MacBook-Pro-2:store sa3idos$ git status
+On branch master
+nothing to commit, working tree clean
+Mohameds-MacBook-Pro-2:store sa3idos$ git log
+commit 27b395d6c34620e02964b98487643e1d8e37b814 (HEAD -> master)
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 23:17:37 2018 +0200
+
+    delete the filegit revert 9c15a959c60df31358c2b80d4d69af58bfd4ddc3
+
+commit 9c15a959c60df31358c2b80d4d69af58bfd4ddc3
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 23:16:18 2018 +0200
+
+    add a file again
+
+commit 9cc7d6021ce1bb9805580447cc5cc8d443e0dd5b
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 22:55:57 2018 +0200
+
+    deleted the file again
+
+commit 18ae1f5839f459f13cbaf406f6ee160eb8e29eed
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 22:54:58 2018 +0200
+
+    adding the file again since there was an error while reverting the delete process
+
+commit b23b0e9782549a9fc452192d25dddafeb3f66db9
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 22:45:44 2018 +0200
+
+    deleted a file
+
+commit 0038f2ac6d44e7fdc1987540a588e6211d624713
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 21:37:59 2018 +0200
+
+    the 3rd and final file
+
+commit 1b7fe6fc9b6e88ac7c8c4b2d6b8dd6ef813d503b
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 21:37:19 2018 +0200
+
+    2nd file done
+
+commit 1c1c1c2811694b6ed40f43432ce6c40fa15cabe1
+Author: MohamedSaeed08 <mohamedsaeed8917@gmail.com>
+Date:   Sun Feb 11 21:34:14 2018 +0200
+
+    just added the first file
+Mohameds-MacBook-Pro-2:store sa3idos$ git remove https://github.com/MohamedSaeed08/Indv.-Task.git
+git: 'remove' is not a git command. See 'git --help'.
+
+The most similar command is
+	remote
+Mohameds-MacBook-Pro-2:store sa3idos$ git remote remove https://github.com/MohamedSaeed08/Indv.-Task.git
+fatal: No such remote: https://github.com/MohamedSaeed08/Indv.-Task.git
+Mohameds-MacBook-Pro-2:store sa3idos$ git remote  -v
+origin	https://github.com/MohamedSaeed08/Indv.-Task.git (fetch)
+origin	https://github.com/MohamedSaeed08/Indv.-Task.git (push)
+Mohameds-MacBook-Pro-2:store sa3idos$ git remote
+origin
+Mohameds-MacBook-Pro-2:store sa3idos$ git remote /u
+error: Unknown subcommand: /u
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+Mohameds-MacBook-Pro-2:store sa3idos$ git remote remove https://github.com/MohamedSaeed08/Indv.-Task.git
+fatal: No such remote: https://github.com/MohamedSaeed08/Indv.-Task.git
+Mohameds-MacBook-Pro-2:store sa3idos$ git remote add origin 
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+Mohameds-MacBook-Pro-2:store sa3idos$ git remote origin -f
+error: Unknown subcommand: origin
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+Mohameds-MacBook-Pro-2:store sa3idos$ git remote origin 
+error: Unknown subcommand: origin
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+Mohameds-MacBook-Pro-2:store sa3idos$ git remote add origin 
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+Mohameds-MacBook-Pro-2:store sa3idos$ git remote -v
+origin	https://github.com/MohamedSaeed08/Indv.-Task.git (fetch)
+origin	https://github.com/MohamedSaeed08/Indv.-Task.git (push)
+Mohameds-MacBook-Pro-2:store sa3idos$ git remote rename
+usage: git remote rename <old> <new>
+
+Mohameds-MacBook-Pro-2:store sa3idos$ git remote rename origin destination
+Mohameds-MacBook-Pro-2:store sa3idos$ git remote -v
+destination	https://github.com/MohamedSaeed08/Indv.-Task.git (fetch)
+destination	https://github.com/MohamedSaeed08/Indv.-Task.git (push)
+Mohameds-MacBook-Pro-2:store sa3idos$ git remote add origin https://github.com/MohamedSaeed08/Repo2.git
+Mohameds-MacBook-Pro-2:store sa3idos$ git remote -v
+destination	https://github.com/MohamedSaeed08/Indv.-Task.git (fetch)
+destination	https://github.com/MohamedSaeed08/Indv.-Task.git (push)
+origin	https://github.com/MohamedSaeed08/Repo2.git (fetch)
+origin	https://github.com/MohamedSaeed08/Repo2.git (push)
+Mohameds-MacBook-Pro-2:store sa3idos$ git remote rm destination
+Mohameds-MacBook-Pro-2:store sa3idos$ git remote -v
+origin	https://github.com/MohamedSaeed08/Repo2.git (fetch)
+origin	https://github.com/MohamedSaeed08/Repo2.git (push)
+Mohameds-MacBook-Pro-2:store sa3idos$ git push -u origin master
+Counting objects: 15, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (15/15), 9.06 KiB | 3.02 MiB/s, done.
+Total 15 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas: 100% (6/6), done.
+To https://github.com/MohamedSaeed08/Repo2.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+
+Mohameds-MacBook-Pro-2:store sa3idos$ touch README.md
+Mohameds-MacBook-Pro-2:store sa3idos$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mohameds-MacBook-Pro-2:store sa3idos$ vim README.md
+Mohameds-MacBook-Pro-2:store sa3idos$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mohameds-MacBook-Pro-2:store sa3idos$ git branch ReadMe
+Mohameds-MacBook-Pro-2:store sa3idos$ git branch
+  ReadMe
+* master
+Mohameds-MacBook-Pro-2:store sa3idos$ git checkout ReadMe
+Switched to branch 'ReadMe'
+Mohameds-MacBook-Pro-2:store sa3idos$ git status
+On branch ReadMe
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+Mohameds-MacBook-Pro-2:store sa3idos$ git add README.md
+Mohameds-MacBook-Pro-2:store sa3idos$ git status
+On branch ReadMe
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   README.md
+
+Mohameds-MacBook-Pro-2:store sa3idos$ git commit -m "created README.md file then a new branch ReadMe then i added the file to the new branch."
+[ReadMe 4d282f0] created README.md file then a new branch ReadMe then i added the file to the new branch.
+ 1 file changed, 9 insertions(+)
+ create mode 100644 README.md
+Mohameds-MacBook-Pro-2:store sa3idos$ git status
+On branch ReadMe
+nothing to commit, working tree clean
+Mohameds-MacBook-Pro-2:store sa3idos$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+Mohameds-MacBook-Pro-2:store sa3idos$ git merge ReadMe
+Updating 27b395d..4d282f0
+Fast-forward
+ README.md | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+ create mode 100644 README.md
+Mohameds-MacBook-Pro-2:store sa3idos$ 
+
+
+
+
